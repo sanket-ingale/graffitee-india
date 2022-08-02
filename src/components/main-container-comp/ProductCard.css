@@ -1,0 +1,130 @@
+.product--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+    gap: 1vw;
+    width: 15vw;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.product--card:hover{
+    box-shadow: 0 0 10px #000;
+    transform: scale(1.05);
+}
+
+.product--img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.product--info{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product--title{
+    font-size: 0.9em;
+}
+
+.product--cat{
+    font-weight: 200;
+    font-size: 0.6em;
+    font-style: italic;
+}
+
+.product--price{
+    align-self: flex-end;
+    font-weight: 600;
+}
+
+.product--modal{
+    display: flex;
+    width: 100%;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.product--img--modal{
+    border-radius: 10px;
+    width: 25vw;
+}
+
+.product--info--modal{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.product--title--modal{
+    font-size: 1.5em;
+}
+
+.product--cat--modal{
+    font-weight: 200;
+    font-size: 0.6em;
+    font-style: italic;
+}
+
+.product--price--modal{
+    font-weight: 600;
+}
+
+.p--button{
+    text-align: center;
+    padding: 1vh;
+    width: 100%;
+    cursor: pointer;
+}
+
+.buy--now{
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s;
+}
+.buy--now:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.addto--cart{
+    background-color: #ddd;
+    transition: 0.2s;
+}
+.addto--cart:hover{
+    background-color: #aaa;
+}
+
+.close{
+    margin: 3vh 0;
+    text-decoration: underline;
+}
+
+.skeleton{
+    /* border-radius: 1em; */
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    from {
+        background-color: #ddd;
+    }
+    to{
+        background-color: #eee;
+    }
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 50vw;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,122 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 30px #333;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 0 2vw;
+}
+
+.web--logo{
+    height: 10vh;
+    cursor: pointer;
+}
+
+.search--bar{
+    height: 60%;
+    width: 30vw;
+    background-color: rgba(150, 150, 150, 0.5);
+    backdrop-filter: saturate(180%) blur(10px);
+    font-size: 0.8rem;
+    border: none;
+    text-indent: 1vw;
+    border-radius: 50px;
+}
+.search--bar:focus{
+    outline:none;
+    background-color: #ccc;
+}
+.search--bar::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    height: 10px;
+    padding: 0 1vw 0 0;
+    content: url("../icons/close.png");
+    cursor: pointer;
+}
+
+.nav--bar{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.nav--bar li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shopping--cart{
+    height: 50%;
+}
+
+.no--style{
+    height: 100%;
+    padding: 0 1vw;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+.no--style:hover{
+    background-color: rgba(50, 50, 50, 0.5);
+    color: inherit;
+}
+.active{
+    background-color: rgba(20, 20, 20, 0.1);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.cart--bg{
+    height: 90%;
+    padding: 0 0.8vw;
+    display: flex;
+    align-items: center;
+}
+.cart--bg:hover{
+    border-radius: 50%;
+    background-color: rgba(50, 50, 50, 0.5);
+    color: inherit;
+}
+
+.cart--count{
+    position: relative;
+}
+
+.cart--count::after{
+    content: attr(productCount);
+    font-size: 11px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-align: center;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 60, 60);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.off--canvas{
+    border: none;
+    box-shadow: inset 0px 0px 30px #fff;
+    box-shadow: 0px 0px 30px #333;
+    background-color: #ddd;
+    margin-top: 8vh;
+    z-index: 1;
+}
+
+.cart--title{
+    font-weight: 400;
+}

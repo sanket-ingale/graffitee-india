@@ -1,0 +1,134 @@
+.explore {
+    width: 100%;
+    min-height: 82vh;
+    display: flex;
+    justify-content: stretch;
+}
+
+.explore--left {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    width: 20%;
+    padding: 20px;
+}
+
+.explore--right{
+    background-color: #eee;
+}
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-bottom: 5vh;
+}
+
+.filter--title{
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: 300;
+    padding-top: 1vh;
+}
+
+.size--div, .color--div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding-bottom: 2vh;
+}
+
+.cat--div{
+    display: grid;
+    grid-template-columns: 6.5vw auto;
+    gap: 1vw;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    box-sizing: content-box;
+    height: 1vw;
+    width: 2vw;
+}
+input[type=checkbox]::before {
+    content: attr(cbname);
+    font-size: 0.7em;
+    position: absolute;
+    text-align: center;
+    width: 2.5vw;
+    height: 1.6vw;
+    background-color: #fff;
+    border-radius: 5px;
+}
+input[type=checkbox]:checked::after {
+    content: attr(cbname);
+    font-size: 0.7em;
+    text-align: center;
+    width: 2.5vw;
+    height: 1.6vw;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+}
+
+#anime-box::before,
+#custom-box::before,
+#typo-box::before,
+#solid-box::before{
+    width: 7vw;
+}
+#anime-box:checked::after,
+#custom-box:checked::after,
+#typo-box:checked::after,
+#solid-box:checked::after{
+    width: 7vw;
+}
+
+#c-mustard:before{
+    background-color: #FFDB58;
+}
+#c-onion:before{
+    background-color: #9d5a8f   ;
+}
+#c-green:before{
+    background-color: #355E3B;
+}
+#c-navy:before{
+    background-color: #000080;
+}
+#c-grey:before{
+    background-color: grey;
+}
+#c-white:before{
+    background-color: white;
+}
+#c-black:before{
+    background-color: black;
+}
+#c-mustard:checked::after,
+#c-onion:checked::after,
+#c-green:checked::after,
+#c-navy:checked::after,
+#c-grey:checked::after,
+#c-white:checked::after,
+#c-black:checked::after{
+    background-color: inherit;
+    border: 3px solid #888;
+}
+
+.clear--all{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.explore--right {
+    padding: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 80%;
+    height: 100%;
+}
