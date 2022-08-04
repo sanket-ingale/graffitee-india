@@ -5,7 +5,7 @@ export default[
         title: "Weird Vibes",
         category: "Typography",
         price: 449,
-        size: ['S','M','L'],
+        size: ['M','L'],
         color: "yellow",
         inStock: 5
     },

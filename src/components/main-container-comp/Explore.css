@@ -30,95 +30,60 @@
     padding-top: 1vh;
 }
 
-.size--div, .color--div{
+.size--div, .color--div, .category--div{
     display: flex;
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 0.5vw;
     padding-bottom: 2vh;
 }
 
-.cat--div{
-    display: grid;
-    grid-template-columns: 6vw auto;
-    gap: 1vw;
-}
-
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-    box-sizing: content-box;
-    height: 1vw;
-    width: 2vw;
+.size--box, .category--box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    padding: 2%;
+    background-color: #fff;
+    border: none;
     transition: 0.2s;
 }
-input[type=checkbox]::before {
-    content: attr(cbname);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7em;
+.size--box, .color--box{
+    height: 4vh;
     width: 2.5vw;
-    height: 1.6vw;
-    background-color: #fff;
-    /* border-radius: 5px; */
+    border: none;
+    transition: 0.2s;
 }
-input[type=checkbox]:checked::after {
-    content: '';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7em;
-    text-align: center;
-    width: 2.5vw;
-    height: 1.6vw;
-    /* background-color: #000;
-    color: #fff; */
-    position: absolute;
-    border-bottom: 0.4vh solid #000;
-}
-input[type=checkbox]:active{
+
+.size--box:active, .category--box:active, .color--box:active{
     transform: scale(0.9);
 }
 
-input[type=checkbox]:hover{
-    border-bottom: 2px solid #000;
+.button-active{
+    border-bottom: 0.5vh solid #000;
+}
+.button-active-w{
+    border-bottom: 0.5vh solid #fff;
 }
 
-#anime-box::before,
-#custom-box::before,
-#typo-box::before,
-#solid-box::before{
-    /* width: 7vw; */
-    width: 300%;
-}
-#anime-box:checked::after,
-#custom-box:checked::after,
-#typo-box:checked::after,
-#solid-box:checked::after{
-    /* width: 7vw; */
-    width: 300%;
-}
-
-#c-mustard:before{
+#c-mustard{
     background-color: #FFDB58;
 }
-#c-onion:before{
+#c-onion{
     background-color: #9d5a8f   ;
 }
-#c-green:before{
+#c-green{
     background-color: #355E3B;
 }
-#c-navy:before{
+#c-navy{
     background-color: #000080;
 }
-#c-grey:before{
+#c-grey{
     background-color: grey;
 }
-#c-white:before{
+#c-white{
     background-color: white;
 }
-#c-black:before{
+#c-black{
     background-color: black;
 }
 #c-mustard:checked::after,

@@ -10,7 +10,6 @@ export default function Cart() {
         <CartCard/>
         <CartCard/>
         <CartCard/>
-
         <CartCard/>
         <CartCard/>
         <CartCard/>
