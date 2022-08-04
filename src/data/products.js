@@ -6,7 +6,8 @@ export default[
         category: "Typography",
         price: 449,
         size: ['S','M','L'],
-        color: "yellow"
+        color: "yellow",
+        inStock: 5
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export default[
         category: "Custom",
         price: 449,
         size: ['S','M','L'],
-        color: "black"
+        color: "black",
+        inStock: 5
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export default[
         category: "Custom",
         price: 449,
         size: ['S','M','L'],
-        color: "green"
+        color: "green",
+        inStock: 5
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export default[
         category: "Anime",
         price: 449,
         size: ['S','M','L'],
-        color: "navy"
+        color: "navy",
+        inStock: 5
     },
     {
         id: 6,
@@ -42,7 +46,8 @@ export default[
         category: "Anime",
         price: 449,
         size: ['S','M','L'],
-        color: "yellow"
+        color: "yellow",
+        inStock: 5
     },
     {
         id: 7,
@@ -51,7 +56,8 @@ export default[
         category: "Typography",
         price: 449,
         size: ['S','M','L'],
-        color: "onion"
+        color: "onion",
+        inStock: 5
     },
     {
         id: 8,
@@ -60,7 +66,8 @@ export default[
         category: "Typography",
         price: 449,
         size: ['S','M','L'],
-        color: "navy"
+        color: "navy",
+        inStock: 5
     },
     {
         id: 9,
@@ -69,7 +76,8 @@ export default[
         category: "Custom",
         price: 449,
         size: ['S','M','L'],
-        color: "onion"
+        color: "onion",
+        inStock: 5
     },
     {
         id: 10,
@@ -78,7 +86,8 @@ export default[
         category: "Typography",
         price: 449,
         size: ['S','M','L'],
-        color: "yellow"
+        color: "yellow",
+        inStock: 5
     },
     {
         id: 11,
@@ -87,7 +96,8 @@ export default[
         category: "Typography",
         price: 449,
         size: ['S','M','L'],
-        color: "black"
+        color: "black",
+        inStock: 5
     },
     {
         id: 12,
@@ -96,6 +106,7 @@ export default[
         category: "Typography",
         price: 449,
         size: ['S','M','L'],
-        color: "grey"
+        color: "grey",
+        inStock: 5
     }
 ]

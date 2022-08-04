@@ -18,7 +18,7 @@ export default function ProductCard(props){
                 />
                 <div className='product--info'>
                     <span className='product--title'>{props.title}</span>
-                    <span className='product--cat'>{props.category}</span>
+                    <div className='product--cat'>{props.category}</div>
                     <span className='product--price'>₹{props.price}</span>
                 </div>
             </div>
@@ -34,7 +34,7 @@ export default function ProductCard(props){
 
 function ProductModal(props) {
     return (
-        <Modal  {...props} centered>
+        <Modal  {...props} centered >
             <Modal.Body>
                 <Container>
                     <div className="product--modal">

@@ -13,37 +13,33 @@ export default function Header() {
 
   return (
     <div className="header">
-      <Link to='/admin'>
-        <img className="web--logo" src={require("../images/GRAFFITEE@2x.png")} alt="graffitee-logo"/>
-      </Link>
-      <input type="search" placeholder="Search designs" className='search--bar'/>
       <ul className='nav--bar'>
         <CustomLink to='/' className='no--style'>Home</CustomLink>
         <CustomLink to='/explore' className='no--style'>Explore</CustomLink>
         <CustomLink to='/custyo' className='no--style'>Customize your own</CustomLink> 
+      </ul>
+      <Link to='/admin'>
+        <img className="web--logo" src={require("../images/GRAFFITEE@2x.png")} alt="graffitee-logo"/>
+      </Link>
+      <ul className='nav--bar'>
+        <input type="search" placeholder="Search designs" className='search--bar'/>
         <div
           className={`cart--bg ${true && "cart--count"}`}
           productcount={9}
           onClick={handleShow}
-        >
-          <img
-            className="shopping--cart"
-            src={require("../icons/shopping-cart.png")}
-            alt="Cart Logo"
-          />
-        </div>
+        />
       </ul>
       <Offcanvas 
-        className="off--canvas" 
+        className="off-canvas" 
         show={show} 
         onHide={handleClose} 
         placement="end" 
         backdrop={false}
         scroll={true}>
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header  closeButton>
           <Offcanvas.Title className='cart--title'>Cart</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className='off-canvas--body'>
           <Cart/>
         </Offcanvas.Body>
       </Offcanvas>

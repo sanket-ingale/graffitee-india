@@ -10,11 +10,11 @@
     flex-direction: column;
     background-color: #ddd;
     width: 20%;
-    padding: 20px;
+    padding: 2vw;
 }
 
-.explore--right{
-    background-color: #eee;
+.explore--left--title{
+    font-weight: 500;
 }
 
 .filters{
@@ -27,7 +27,6 @@
 .filter--title{
     font-size: 0.8em;
     font-style: italic;
-    font-weight: 300;
     padding-top: 1vh;
 }
 
@@ -40,7 +39,7 @@
 
 .cat--div{
     display: grid;
-    grid-template-columns: 6.5vw auto;
+    grid-template-columns: 6vw auto;
     gap: 1vw;
 }
 
@@ -50,39 +49,55 @@ input[type=checkbox] {
     box-sizing: content-box;
     height: 1vw;
     width: 2vw;
+    transition: 0.2s;
 }
 input[type=checkbox]::before {
     content: attr(cbname);
-    font-size: 0.7em;
     position: absolute;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
     width: 2.5vw;
     height: 1.6vw;
     background-color: #fff;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 input[type=checkbox]:checked::after {
-    content: attr(cbname);
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.7em;
     text-align: center;
     width: 2.5vw;
     height: 1.6vw;
-    background-color: #000;
-    color: #fff;
+    /* background-color: #000;
+    color: #fff; */
     position: absolute;
+    border-bottom: 0.4vh solid #000;
+}
+input[type=checkbox]:active{
+    transform: scale(0.9);
+}
+
+input[type=checkbox]:hover{
+    border-bottom: 2px solid #000;
 }
 
 #anime-box::before,
 #custom-box::before,
 #typo-box::before,
 #solid-box::before{
-    width: 7vw;
+    /* width: 7vw; */
+    width: 300%;
 }
 #anime-box:checked::after,
 #custom-box:checked::after,
 #typo-box:checked::after,
 #solid-box:checked::after{
-    width: 7vw;
+    /* width: 7vw; */
+    width: 300%;
 }
 
 #c-mustard:before{
@@ -128,7 +143,9 @@ input[type=checkbox]:checked::after {
     padding: 2vw;
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: space-around; */
     gap: 2vw;
     width: 80%;
-    height: 100%;
+    min-height: 84vh;
+    background-color: #eee;
 }

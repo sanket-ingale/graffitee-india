@@ -9,6 +9,8 @@ import Admin from './components/main-container-comp/Admin';
 import Footer from './components/Footer';
 import CustYO from './components/main-container-comp/CustYO';
 
+export const CartContext = React.createContext;
+
 export default function App() {
 
   useEffect(() => {
@@ -18,21 +20,23 @@ export default function App() {
   });
 
   return (
-    <div className="app">
-      <div id='preloader'>
-        <img className="preloader--img" src={require("./images/GRAFFITEE@2x.png")} alt="graffitee-logo"/>
+    // <CartContext.Provider value={''}>
+      <div className="app">
+        <div id='preloader'>
+          <img className="preloader--img" src={require("./images/GRAFFITEE@2x.png")} alt="graffitee-logo"/>
+        </div>
+        <Header />
+        <div className="main--container">
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/explore' element={<Explore/>}/>
+            <Route path='/custyo' element={<CustYO/>}/>
+            <Route path='/admin' element={<Admin/>}/>
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Header />
-      <div className="main--container">
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/explore' element={<Explore/>}/>
-          <Route path='/custyo' element={<CustYO/>}/>
-          <Route path='/admin' element={<Admin/>}/>
-        </Routes>
-      </div>
-      <Footer />
-    </div>
+    // </CartContext.Provider>
   );
 }
 

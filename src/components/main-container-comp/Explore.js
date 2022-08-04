@@ -22,7 +22,7 @@ export default function Explore() {
   return (
     <div className="explore">
       <div className="explore--left">
-        <span>Filters</span>
+        <span className="explore--left--title">Filters</span>
         <div className='filters'>
           <span className='filter--title'>Size</span>
           <div className='size--div'>
@@ -44,15 +44,16 @@ export default function Explore() {
           </div>
           <span className='filter--title'>Category</span>  
           <div className='cat--div'>
-            <input type='checkbox' classname='cat--box' cbname='Anime' id='anime-box'/>
-            <input type='checkbox' classname='cat--box' cbname='Custom' id='custom-box'/>
-            <input type='checkbox' classname='cat--box' cbname='Typography' id='typo-box'/>
-            <input type='checkbox' classname='cat--box' cbname='Solid Colors' id='solid-box'/>
+            <input type='checkbox' className='cat--box' cbname='Anime' id='anime-box'/>
+            <input type='checkbox' className='cat--box' cbname='Custom' id='custom-box'/>
+            <input type='checkbox' className='cat--box' cbname='Typography' id='typo-box'/>
+            <input type='checkbox' className='cat--box' cbname='Solid Colors' id='solid-box'/>
           </div>
         </div>
         <span className='clear--all' onClick={clearAll}>Clear all</span>
       </div>
       <div className='explore--right'>
+        {productCards}
         {productCards}
       </div>
       <ToTop/>

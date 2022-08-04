@@ -1,4 +1,4 @@
-// import './CustYO.css';
+import './CustYO.css';
 
 export default function CustYO() {
   return (
