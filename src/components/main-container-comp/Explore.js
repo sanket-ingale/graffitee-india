@@ -1,12 +1,13 @@
 import './Explore.css';
 import React, { useState, useReducer } from 'react';
 import ProductCard from './ProductCard';
-import ToTop from './totop';
+import ToTop from './ToTop';
 import data from '../../data/products';
 
 export default function Explore() {
 
   const reducer = (state, action) => {
+    state.isFilterOff = false;
     switch(action.id) {
       case "size-s":
         return {...state, size: {...state.size, s: !state.size.s}}
@@ -42,6 +43,7 @@ export default function Explore() {
         return {...state, category: {...state.category, solid: !state.category.solid}}
       case "clear-all":
         return {
+          isFilterOff: true,
           size: {
             s: false,
             m: false,
@@ -71,6 +73,7 @@ export default function Explore() {
   }
 
   const [state, dispatch] = useReducer(reducer, {
+    isFilterOff: true,
     size: {
       s: false,
       m: false,
@@ -96,12 +99,12 @@ export default function Explore() {
   });
 
   const checkFilter = (item) => {
-    return state.size.s === item.size.includes('S');
+    return (item.size.includes('S'));
   }
   
-  const productCads = data.filter(checkFilter);
+  const productFilter = data.filter(checkFilter);
   
-  const productCards = productCads.map(item => <ProductCard key={data.id} {...item}/>);
+  const productCards = productFilter.map(item => <ProductCard key={data.id} {...item}/>);
 
   return (
     <div className="explore">
@@ -137,7 +140,6 @@ export default function Explore() {
         <span className='clear--all' onClick={() => dispatch({id:'clear-all'})}>Clear all</span>
       </div>
       <div className='explore--right'>
-        {productCards}
         {productCards}
       </div>
       <ToTop/>

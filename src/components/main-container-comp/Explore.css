@@ -106,10 +106,12 @@
 
 .explore--right {
     padding: 2vw;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     /* justify-content: space-around; */
     gap: 2vw;
+    /* border: 1px solid red; */
     width: 80%;
     min-height: 84vh;
     background-color: #eee;

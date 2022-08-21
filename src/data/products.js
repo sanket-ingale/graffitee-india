@@ -7,7 +7,8 @@ export default[
         price: 449,
         size: ['M','L'],
         color: "yellow",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "black",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "green",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "navy",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 6,
@@ -47,7 +51,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "yellow",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 7,
@@ -57,7 +62,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "onion",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 8,
@@ -67,7 +73,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "navy",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 9,
@@ -77,7 +84,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "onion",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 10,
@@ -87,7 +95,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "yellow",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 11,
@@ -97,7 +106,8 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "black",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     },
     {
         id: 12,
@@ -107,6 +117,7 @@ export default[
         price: 449,
         size: ['S','M','L'],
         color: "grey",
-        inStock: 5
+        inStock: 5,
+        cartQty: 1
     }
 ]

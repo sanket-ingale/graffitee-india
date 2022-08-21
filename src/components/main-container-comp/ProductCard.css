@@ -108,14 +108,14 @@
     transform: scale(0.9);
 }
 
-.addto--cart{
+.to--cart{
     background-color: #ddd;
     transition: 0.2s;
 }
-.addto--cart:hover{
+.to--cart:hover{
     background-color: #aaa;
 }
-.addto--cart:active{
+.to--cart:active{
     transform: scale(0.9);
 }
 

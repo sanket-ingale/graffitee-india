@@ -1,46 +1,71 @@
 import './Cart.css';
-import React from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../../App';
 
 export default function Cart() {
+  const cartContext = useContext(CartContext);
+
   return (
     <>
-      <div className='cart'>
-        <CartCard/>
-        <CartCard/>
-        <CartCard/>
-        <CartCard/>
-        <CartCard/>
-        <CartCard/>
-        <CartCard/>
-        <CartCard/>
-      </div>
-      <div className='cart--footer'>
-        <div className='cart--clearall'>Clear all</div>
-        <div className='cart--checkout'>Checkout</div>
-        <div className='cart--total'>Total ₹1000</div>
-      </div>
+      {
+        cartContext.cart.length === 0 ? 
+        'Cart is empty':
+        <>
+          <div className='cart'>
+            {cartContext.cart.map(item => <CartCard key='' {...item}/>)}
+          </div>
+          <div className='cart--footer'>
+            <div 
+              className='cart--clearall'
+              onClick={() => cartContext.dispatch({ type: "REMOVE_ALL" })}
+            >
+              Clear all
+            </div>
+            <div className='cart--checkout'>Checkout</div>
+            <div className='cart--total'>Total ₹{cartContext.cart.reduce((total, item) => (total + item.price), 0)}</div>
+          </div>
+        </> 
+      }
     </>
   );
 }
 
-function CartCard(){
+function CartCard(props){
+  
+  const cartContext = useContext(CartContext);
+
   return (
     <div className="cart--card">
       <img
           className='cart--card--img'
-          src={require(`../../../src/images/weird-vibes-grey.png`)}
+          src={require(`../../../src/images/${props.img}`)}
           alt="cart"
       />
       <div className='cart--card--info'>
-          <span className='cart--card--title'>Weird vibes</span>
-          <span className='cart--card--price'>Rs.449</span>
+          <span className='cart--card--title'>{props.title}</span>
+          <span className='cart--card--price'>₹{props.price}</span>
           <span className='cart--card--size'>M (Male)</span>
           <div className='cart--card--counter'>
-            <div className='cart--remove'>-</div>
-            <div className='cart--num'>1</div>
-            <div className='cart--add'>+</div>        
+            <div 
+              className='cart--remove'
+              onClick={() => cartContext.dispatch({ type: "REMOVE_ONE", id: props.id, cartQty: props.cartQty })}
+            >
+              -
+            </div>
+            <div className='cart--num'>{props.cartQty}</div>
+            <div 
+              className='cart--add'
+              onClick={() => cartContext.dispatch({ type: "ADD_ONE", id: props.id })}
+            >
+              +
+            </div>
           </div>
-          <span className='cart--card--remove'>Remove</span>
+          <span 
+            className='cart--card--remove' 
+            onClick={() => cartContext.dispatch({ type: "REMOVE_FROM_CART", id: props.id })}
+          >
+            Remove
+          </span>
       </div>
     </div>
   );

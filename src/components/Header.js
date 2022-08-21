@@ -1,10 +1,13 @@
 import './Header.css';
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
 import Cart from './main-container-comp/Cart';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { CartContext } from '../App';
 
 export default function Header() {
+
+  const cartContext = useContext(CartContext);
 
   const [show, setShow] = useState(false);
 
@@ -22,10 +25,18 @@ export default function Header() {
         <img className="web--logo" src={require("../images/GRAFFITEE@2x.png")} alt="graffitee-logo"/>
       </Link>
       <ul className='nav--bar'>
-        <input type="search" placeholder="Search designs" className='search--bar'/>
+        <div className='search--bar--container'>
+          <input 
+            id="searchright"
+            className="search--bar expandright" 
+            type="search" name="q" 
+            placeholder="Search designs"
+          />
+          <label for="searchright" className='search--bg'/>
+        </div>
         <div
-          className={`cart--bg ${true && "cart--count"}`}
-          productcount={9}
+          className={`cart--bg ${cartContext.cart.length > 0 && "cart--count"}`}
+          productcount={cartContext.cart.length}
           onClick={handleShow}
         />
       </ul>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './totop.css';
+import './ToTop.css';
 
 export default function ToTop() {
 

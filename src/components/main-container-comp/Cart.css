@@ -28,8 +28,9 @@
     gap: 1vw;
     padding: 2%;
     margin: 2%;
-    background-color: #ccc5;
-    border-bottom: 0.5vh solid #000;
+    /* background-color: #ccc5; */
+    border-bottom: 0.3vh solid #000;
+    border-radius: 1vh;
     /* color: #fff; */
     backdrop-filter: saturate(180%) blur(10px);
 }
