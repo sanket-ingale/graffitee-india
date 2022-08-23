@@ -22,7 +22,7 @@ export default function Cart() {
               Clear all
             </div>
             <div className='cart--checkout'>Checkout</div>
-            <div className='cart--total'>Total ₹{cartContext.cart.reduce((total, item) => (total + item.price), 0)}</div>
+            <div className='cart--total'>Total ₹{cartContext.cart.reduce((total, item) => (total + item.price * item.cartQty), 0)}</div>
           </div>
         </> 
       }
